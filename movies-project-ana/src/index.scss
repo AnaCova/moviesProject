@@ -1,0 +1,12 @@
+/* Base */
+@import './scss/base/base';
+@import './scss/base/resets';
+@import './scss/base/variables';
+
+/* Bootstrap */
+@import '~bootstrap/scss/bootstrap';
+
+/* Components */
+@import  './scss/components/header';
+@import './scss/components/navbar';
+@import './scss/components/movie';
