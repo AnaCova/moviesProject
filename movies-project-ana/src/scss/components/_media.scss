@@ -1,0 +1,54 @@
+.media_container{
+    @include container;
+    text-decoration: none;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+.media_poster{
+@include poster;
+}
+
+.home_container {
+    @include container;
+    text-decoration: none;
+    width: 40%;
+    margin: 20px 0;
+}
+
+.home_poster {
+    @include poster;
+}
+
+
+label {
+    @include labels
+}
+
+#light label{
+    color: $dark;
+}
+
+#dark label{
+    color: $light;
+}
+
+
+img {
+    @include images_list
+}
+
+@media(min-width: $breakpoint-desktop){
+    .media_container{
+        width: 30%;
+    }
+
+    .home_container{
+        width: 22%;
+    }
+
+    label{
+        font-size: 22px;
+    }
+
+}

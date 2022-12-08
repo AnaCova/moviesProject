@@ -1,10 +1,10 @@
 import React from 'react'
 import Movie from './Movie'
 
-const MoviesList = ({products}) => {
-    console.log("ListProducts",products)
-  return products.map((product,key) =>(
-    <Movie product = {product} key = {key} />
+const MoviesList = ({movies}) => {
+    //console.log("ListProducts",movies)
+  return movies.map((movies,key) =>(
+    <Movie movie={movies} key={key} />
   ));
 }
 

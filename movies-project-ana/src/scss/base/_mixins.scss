@@ -1,0 +1,27 @@
+@mixin container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin labels {
+    height: 45px;
+    margin: 15px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+@mixin images_list {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

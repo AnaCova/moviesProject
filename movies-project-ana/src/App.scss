@@ -1,1 +1,9 @@
+@import './scss/base/variables';
+@import './scss/base/mixins';
 
+.app_container {
+    @include container;
+    position: relative;
+    min-height: 100vh;
+    background-color: $main-background;
+}

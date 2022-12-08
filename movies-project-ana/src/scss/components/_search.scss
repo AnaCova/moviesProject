@@ -1,0 +1,42 @@
+.search_container {
+    margin-bottom: 10px;
+    ;
+}
+
+.search_form {
+    margin: 10px 0;
+    border-radius: 0.375rem;
+    box-shadow: 0px 4px 4px 0 rgb(0 0 0 / 20%);
+
+}
+
+.me-2.form-control {
+    margin-right: 0 !important;
+    border-radius: 0.375rem 0 0 0.375rem;
+}
+
+.btn.search_button {
+    border-radius: 0 0.375rem 0.375rem 0;
+    background-color: $main;
+    border: none;
+}
+
+//Icon Styles
+i.bx.bx-search-alt-2{
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+
+@media(min-width: $breakpoint-desktop) {
+    .search_container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+    }
+
+    .search_form{
+        width: 60%;
+    }
+
+}

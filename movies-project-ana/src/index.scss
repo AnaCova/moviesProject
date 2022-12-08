@@ -2,11 +2,20 @@
 @import './scss/base/base';
 @import './scss/base/resets';
 @import './scss/base/variables';
+@import './scss/base/mode';
+
+/* Mixins */
+@import './scss/base/mixins';
 
 /* Bootstrap */
 @import '~bootstrap/scss/bootstrap';
 
 /* Components */
-@import  './scss/components/header';
+@import './App.scss';
+@import './scss/components/login';
 @import './scss/components/navbar';
-@import './scss/components/movie';
+@import './scss/components/main';
+@import './scss/components/search';
+@import './scss/components/media';
+@import './scss/components/media_details';
+@import './scss/components/footer';

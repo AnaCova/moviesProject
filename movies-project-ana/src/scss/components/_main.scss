@@ -1,0 +1,19 @@
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#light{
+    background-color: $lighter;
+}
+
+#dark{
+    background-color: $dark;
+}
+
+@media(min-width: $breakpoint-desktop){
+
+}
