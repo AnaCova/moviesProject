@@ -1,12 +1,114 @@
-nav.mb-3.navbar.navbar-expand-lg{
-    background-color:$main;
+.header_container{
+    height: 10vh;
 }
+
+//Navbar Styles
+#light nav.mb-3.navbar.navbar-expand-lg {
+    width: 100%;
+    background-color: $main;
+}
+
+#dark nav.mb-3.navbar.navbar-expand-lg {
+    width: 100%;
+    background-color: $secondary;
+}
+
+.nav-item{
+    height: 48px;
+    margin: 12px;
+}
+
+
 //Offcanvas body size
-.offcanvas.offcanvas-end.show{
+
+a{
+    text-decoration: none;
+}
+.offcanvas.offcanvas-start.show {
     width: 220px;
+    background-color: rgba(49, 122, 137, 0.98);
 }
 
-.fade.offcanvas-backdrop.show{
-    background-color:gray;
+.nav_span{
+    font-size: 30px;
+    margin-left: 5px;
+    vertical-align: bottom;
+    color: $light;
+}
 
+.fade.offcanvas-backdrop.show {
+    background-color: rgba($background, 0.9);
+}
+
+
+//mode_switch
+.nav_switch{
+    position: absolute;
+    top: 1rem;
+    right: 3.6rem;
+}
+
+
+
+//right_icons
+
+.right_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mode_switch {
+    vertical-align: middle;
+}
+
+.nav_user_button {
+    background: none;
+    display: inline;
+}
+
+//Icons style
+.bx{
+    font-size: 34px;
+    color: $dark;
+}
+.offcanvas-body a i.bx,
+i.bx.bx-user-circle.user_offcanvas 
+{
+    color: $light;
+}
+
+i.bx.bx-user-circle {
+    margin-left: 5px;
+}
+
+
+
+
+@media(min-width: $breakpoint-desktop) {
+
+    //icons
+    .offcanvas-body a i.bx, i.bx.bx-user-circle.user_offcanvas{
+        display: none;
+    }
+    .right_icons{
+        display: none;
+    }
+
+    .nav_span{
+        font-size: 15px;
+        color: $dark;
+    }
+
+    .nav_switch{
+        top: 0.9rem;
+        right: 12.2rem;
+    }
+
+    .flex-grow-1.pe-3.navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 1.2rem;
+        padding: 0 !important;
+    }
 }

@@ -1,23 +1,35 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import MoviesList from "./MoviesList";
-
+import Footer from "../../footer/Footer";
+import Header from "../../header/Header";
+import Search from "../search/Search"
 const MoviesListContainer = () => {
-  //const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 
   let key = process.env.REACT_APP_MOVIES_KEY;
-  console.log("Key", key);
+  //console.log("Key", key);
 
-  const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
       .get(`https://api.themoviedb.org/3/movie/popular?api_key=${key}&language=en-US&page=1`)
-      .then((res) => setProducts(res.data.results));
+      .then((res) => setMovies(res.data.results));
   }, []);
 
-  //console.log("Productos", products)
+  console.log("List",movies)
 
-  return <MoviesList products={products} />;
+/*   return <MoviesList movies={movies} />; */
+
+return(
+  <>
+<Header />
+<main>
+  <Search/>
+<MoviesList movies={movies} />
+</main>
+<Footer/>
+</>
+)
 };
 
 export default MoviesListContainer;

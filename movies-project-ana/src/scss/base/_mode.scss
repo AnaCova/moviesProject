@@ -1,0 +1,84 @@
+//Loggin
+#light .login_container{
+    background-color: $main;
+}
+#dark .login_container{
+    background-color: $dark;
+}
+
+#light .submit_button{
+    background-color: $dark;
+    color: $light;
+}
+
+#dark .submit_button{
+    background-color: $light;
+    color: $dark;
+}
+
+
+//Navbar mode
+/* #light .nav_span{
+    color: $light;
+}
+#dark .nav_span{
+    color: $dar;
+} */
+
+
+//Movie details light_mode
+#light .media_details_title,
+#light .media_details_release_date,
+#light .media_details_vote,
+#light .media_description
+{
+color: $dark
+}
+
+//Button_details
+#light .media_play_span{
+    color: $light;
+}
+
+
+//Movie details dark_mode
+#dark .media_details_title,
+#dark .media_details_release_date,
+#dark .media_details_vote,
+#dark .media_description
+{
+color: $light
+}
+
+//icons dark_mode
+#dark .bx{
+    font-size: 40px;
+    color: $light;
+}
+
+#dark .offcanvas-body a i.bx,
+i.bx.bx-user-circle.user_offcanvas 
+{
+    color: $light;
+}
+
+#dark .bx.bx-calendar-star,
+#dark .bx.bx-like{
+    font-size: 25px;
+}
+
+//button_details_dark
+
+#dark .media_button{
+    background-color: $light;
+}
+
+#dark .media_play_span{
+    color: $dark;
+}
+
+#dark .media_button,
+#dark .play_media,
+#dark i.bx.bx-play{
+    color: $dark;
+}

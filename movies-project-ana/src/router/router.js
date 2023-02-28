@@ -1,33 +1,42 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from '../App'
-//import MoviesListContainer from "../components/main/moviesListContainer/MoviesListContainer";
-
+import HomeListContainer from "../components/main/home/HomeListContainer";
+import MoviesListContainer from '../components/main/moviesListContainer/MoviesListContainer'
+import MovieDetailsContainer from "../components/main/movieDetails/MovieDetailsContainer";
+import SeriesListContainer from "../components/main/seriesListContainer/SeriesListContainer";
+import Login from '../components/login/Login'
+import SerieDetailsContainer from "../components/main/serieDetails/SerieDetailsContainer";
+import UserProfile from "../components/main/userProfile/UserProfile";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     errorElement: "Not Found",
-    Children: [
+    children: [
       {
         path: "/",
-        element: "Home",
-      },
-/*       {
-        path: "/products",
-        element: <MoviesListContainer />
-      }, */
-      {
-        path: "/movies/:id",
-        element: "MovieDetails",
+        element: <Login/>,
       },
       {
+        path: "/home",
+        element: <HomeListContainer/>,
+      },
+      {
+        path: "/movies",
+        element: <MoviesListContainer/>
+      },
+      {
+        path: "/movie/:id",
+        element: <MovieDetailsContainer/>,
+      },
+   {
         path: "/series",
-        element: "Series",
+        element: <SeriesListContainer/>
       },
       {
         path: "/series/:id",
-        element: "SeriesDetails",
+        element: <SerieDetailsContainer/>,
       },
       {
         path: "/favorites",
@@ -36,13 +45,17 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/login",
-    element: "Login",
+    path: "/user_profile",
+    element: <UserProfile/>,
   },
   {
-    path: "/register",
-    element: "Register",
+    path: "/login",
+    element: <Login/>,
   },
+/*   {
+    path: "/register",
+    element: <Register/>,
+  }, */
 ]);
 
 export default router

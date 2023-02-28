@@ -1,15 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Movie = ({ product }) => {
+const Movie = ({ movie }) => {
+
   return (
-    <Link to={`/products/${product.id}`} className="movie_container">
-      <article className="movie_poster">
-        <img src={"https://image.tmdb.org/t/p/w500"+product.poster_path}/>
-        <h3>{product.title}</h3>
+<>
+<Link to={`/movie/${movie.id}`} className="media_container">
+      <article className="media_poster">
+        <img
+          src={"https://image.tmdb.org/t/p/w500" + movie.poster_path}
+          alt="movie"
+        />
+        <label className="media_title" >{movie.title}</label>
       </article>
     </Link>
+    </>
   );
+
+
+
 };
 
 export default Movie;
